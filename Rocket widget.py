@@ -164,19 +164,19 @@ class DraggableWidget(QWidget):
 
         ## DF new Close button
         
-        # Create a refresh button
-        self.refresh_button = QPushButton(self)
-        self.refresh_button.setIcon(QIcon(testpath+'/Refresh.png'))  # CHANGE FILE PATH HERE
-        self.refresh_button.setFixedSize(32, 32)  # Set the size of the refresh button
-        self.refresh_button.setToolTip('Refresh Webpage')  # Set the tooltip text
-        self.refresh_button.setStyleSheet(
-            "QPushButton { border: none; background-color: transparent; }"  # Remove border and background color
+        # Create a close button
+        self.close_button = QPushButton(self)
+        self.close_button.setIcon(QIcon(testpath+'/Refresh.png'))  # CHANGE FILE PATH HERE
+        self.close_button.setFixedSize(32, 32)  # Set the size of the refresh button
+        self.close_button.setToolTip('Refresh Webpage')  # Set the tooltip text
+        self.close_button.setStyleSheet(
+            "border: none; background-color: transparent; }"  # Remove border and background color
         )
-        self.refresh_button.clicked.connect(self.refresh_webpage)  # Connect the clicked signal to the refresh_webpage method
+        self.close_button.clicked.connect(self.refresh_webpage)  # Connect the clicked signal to the refresh_webpage method
 
-        # Connect hover events to change the icon
-        self.refresh_button.enterEvent = self.refresh_button_hover_enter
-        self.refresh_button.leaveEvent = self.refresh_button_hover_leave
+        # Connectts to change the icon
+        self.close_button.enterEvent = self.refresh_button_hover_enter
+        self.close_button.leaveEvent = self.refresh_button_hover_leave
 
         # Add the refresh button to the layout
         progress_layout.addWidget(self.close_widget)
