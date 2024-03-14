@@ -8,8 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import sys
 import time
-path="C:/Users/feder/OneDrive/Documenti/RocketsWidget/Rocket-Tracking-Widget-extended" #CHANGE THIS TO YOUR OWN FILE PATH
-EID="EI6608463520333824" #PUT YOUR OWN PLAYER ID HERE
+path="C:/Users/..." #CHANGE THIS TO YOUR OWN FILE PATH
+EID="EIXXXXXXXXXXXXX" #PUT YOUR OWN PLAYER ID HERE
 class RingProgressBar(QWidget):
     def __init__(self, parent=None):
         super(RingProgressBar, self).__init__(parent)
