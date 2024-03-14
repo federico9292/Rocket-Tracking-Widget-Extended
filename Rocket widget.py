@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import sys
 import time
-testpath="C:/Users/feder/OneDrive/Documenti/RocketsWidget/Rocket-Tracking-Widget-extended" #CHANGE THIS TO YOUR OWN FILE PATH
+path="C:/Users/feder/OneDrive/Documenti/RocketsWidget/Rocket-Tracking-Widget-extended" #CHANGE THIS TO YOUR OWN FILE PATH
 EID="EI6608463520333824" #PUT YOUR OWN PLAYER ID HERE
 class RingProgressBar(QWidget):
     def __init__(self, parent=None):
@@ -16,7 +16,7 @@ class RingProgressBar(QWidget):
         self.value = 0
         self.specific_number = 0  # Add a member variable for specific number
         self.setFixedSize(100, 100)  # Set a fixed size for the ring progress bar
-        self.picture = QPixmap(testpath+"/Atreggies.png").scaled(69, 53)  # UPDATE OWN FILE PATH FOR THE ICON, YOU CAN ALSO CHANGE THE ICON TO WHAT EVER PICTURE YOU WANT
+        self.picture = QPixmap(path+"/img/Atreggies.png").scaled(69, 53)  # UPDATE OWN FILE PATH FOR THE ICON, YOU CAN ALSO CHANGE THE ICON TO WHAT EVER PICTURE YOU WANT
     
     def setValue(self, value, specific_number):
         self.value = value
@@ -149,13 +149,13 @@ class DraggableWidget(QWidget):
         
         # Create a close button
         self.close_button = QPushButton(self)
-        self.close_button.setIcon(QIcon(testpath+'/Refresh.png'))  # CHANGE FILE PATH HERE
-        self.close_button.setFixedSize(32, 32)  # Set the size of the refresh button
+        self.close_button.setIcon(QIcon(path+'/img/close.png'))  # CHANGE FILE PATH HERE
+        self.close_button.setFixedSize(32, 32)  # Set the size of the close button
         self.close_button.setToolTip('close Webpage')  # Set the tooltip text
         self.close_button.setStyleSheet(
             "border: none; background-color: transparent; }"  # Remove border and background color
         )
-        self.close_button.clicked.connect(self.close_widget)  # Connect the clicked signal to the refresh_webpage method
+        self.close_button.clicked.connect(self.close_widget)  # Connect the clicked signal to the close method
 
 
         # Add the refresh button to the layout
@@ -165,7 +165,7 @@ class DraggableWidget(QWidget):
 
         # Create a refresh button
         self.refresh_button = QPushButton(self)
-        self.refresh_button.setIcon(QIcon(testpath+'/Refresh.png'))  # CHANGE FILE PATH HERE
+        self.refresh_button.setIcon(QIcon(path+'/img/Refresh.png'))  # CHANGE FILE PATH HERE
         self.refresh_button.setFixedSize(32, 32)  # Set the size of the refresh button
         self.refresh_button.setToolTip('Refresh Webpage')  # Set the tooltip text
         self.refresh_button.setStyleSheet(
@@ -200,11 +200,11 @@ class DraggableWidget(QWidget):
 
     # Function to change the refresh button icon on hover enter
     def refresh_button_hover_enter(self, event):
-        self.refresh_button.setIcon(QIcon(testpath+'/Refresh hover.png')) # CHANGE FILE PATH HERE
+        self.refresh_button.setIcon(QIcon(path+'/img/Refresh hover.png')) # CHANGE FILE PATH HERE
 
     # Function to change the refresh button icon on hover leave
     def refresh_button_hover_leave(self, event):
-        self.refresh_button.setIcon(QIcon(testpath+'/Refresh.png')) # CHANGE FILE PATH HERE
+        self.refresh_button.setIcon(QIcon(path+'/img/Refresh.png')) # CHANGE FILE PATH HERE
 
     def update_numbers(self):
         try:
