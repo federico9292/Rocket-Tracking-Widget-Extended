@@ -115,7 +115,7 @@ class DraggableWidget(QWidget):
 
         # Set window properties
         self.setWindowTitle("Rockets Tracker")
-        self.setGeometry(200, 200, 400, 150)  #CHANGE THE FIRST 2 NUMBERS HERE TO CHANGE WHERE THE WIDGET OPENS ON START UP
+        self.setGeometry(1450, -50, 400, 150)  #CHANGE THE FIRST 2 NUMBERS HERE TO CHANGE WHERE THE WIDGET OPENS ON START UP
 
         # Make the window fully transparent
         self.setWindowFlags(Qt.FramelessWindowHint)
@@ -220,11 +220,11 @@ class DraggableWidget(QWidget):
     def refresh_button_hover_leave(self, event):
         self.refresh_button.setIcon(QIcon(path+'/img/Refresh.png')) # CHANGE FILE PATH HERE
 
-    # Function to change the refresh button icon on hover enter
+    # Function to change the close button icon on hover enter
     def close_button_hover_enter(self, event):
         self.close_button.setIcon(QIcon(path+'/img/Close hover.png')) # CHANGE FILE PATH HERE
 
-    # Function to change the refresh button icon on hover leave
+    # Function to change the close button icon on hover leave
     def close_button_hover_leave(self, event):
         self.close_button.setIcon(QIcon(path+'/img/Close.png')) # CHANGE FILE PATH HERE
 
